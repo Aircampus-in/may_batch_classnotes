@@ -238,6 +238,7 @@
 
 // //  { age: 20, country: 'india', name: 'david' }
 // let sortedKeys = Object.keys(obj).sort();
+// console.log(sortedKeys);
 // let sortedObj = {};
 // for (let key of sortedKeys) {
 //   sortedObj[key] = obj[key];
@@ -260,11 +261,96 @@
 
 // sort by values
 
-// let scores = {
+// const scores = {
 //   vasanth: 10,
 //   anjali: 90,
 //   shwetha: 80,
 //   bharath: 35,
 // };
 
-// { vasanth: 10, bharath: 35, shwetha: 80, anjali: 90 }
+// // // { vasanth: 10, bharath: 35, shwetha: 80, anjali: 90 }
+// let values = Object.entries(scores).sort((a, b) => a[1] - b[1]);
+// console.log(values);
+// let sortedObj = {};
+// for (let i = 0; i < values.length; i++) {
+//   console.log("key value pair", values[i]);
+//   let key = values[i][0];
+//   let value = values[i][1];
+//   sortedObj[key] = value;
+// }
+
+// console.log(sortedObj);
+
+//
+
+// const person = {
+//   firstName: "vasanth",
+//   lastName: "kumar",
+//   get fullName() {
+//     return `${person.firstName} ${person.lastName}`;
+//   },
+
+//   set fullName(newName) {
+//     let parts = newName.split(" ");
+//     person.firstName = parts[0];
+//     person.lastName = parts[1];
+//   },
+// };
+
+// person.fullName = "sachin tendulkar";
+
+// console.log(person.fullName);
+
+// {
+//   const message = "good morning";
+//   //   console.log(message);
+// }
+
+// console.log(message);
+
+// this -> object that is executing the current function
+
+// method -> parent obj;
+// function -> global; => new keyword -> new empty object
+
+// const video = {
+//   title: "cricket",
+//   play() {
+//     console.log(this);
+//   },
+//   stop: function () {
+//     console.log(this);
+//   },
+// };
+
+// video.play();
+// video.stop();
+
+// function play() {
+//   console.log(this);
+// }
+
+// let stop = function () {
+//   console.log(this);
+// };
+
+// new play();
+// new stop();
+
+// const match = {
+//   title: "cricket",
+//   players: ["sachin", "dhoni", "kohli"],
+//   displayplayers() {
+//     this.players.forEach((player) => {
+//       console.log(this.title);
+//     });
+//   },
+// };
+
+// match.displayplayers();
+
+// const add = () => {
+//   console.log(this);
+// };
+
+// add();
