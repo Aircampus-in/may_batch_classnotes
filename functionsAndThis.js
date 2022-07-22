@@ -55,3 +55,34 @@
 // }
 
 // console.log(areaOfRectangle(4, 19));
+
+// let vasanth = {
+//   title: "dadada",
+//   flat: function () {
+//     console.log(this);
+//   },
+// };
+
+// vasanth.flat();
+
+// Array destructuring
+// let nums = [1, 2, 3, 4, 5];
+
+// let [num1, num2, ...rest] = nums;
+// console.log(num1, num2, rest);
+
+// let nums = [1, 2];
+
+// let [num1, num2, num3] = nums;
+// console.log(num1, num2, num3);
+
+// object destructuring
+// let obj = {
+//   fname: "satya subham",
+//   Class: "Engineering",
+//   profession: "developer",
+// };
+
+// let { fname, Class } = obj;
+
+// console.log(fname, Class);
