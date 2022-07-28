@@ -54,3 +54,46 @@
 // }
 
 // console.log(getSumOfRange(5, 8));
+
+// power of a number
+// 2, 4 => 2 * 2* 2 * 2 = 16
+
+// function getPower(base, exponential) {
+//   if (exponential < 0) return -1;
+//   if (exponential === 0) return 1;
+//   let total = 1;
+//   for (let i = 0; i < exponential; i++) {
+//     total *= base;
+//   }
+//   return total;
+// }
+
+// console.log(getPower(2, -1));
+
+// function getPower(base, exponential) {
+//   if (exponential === 0) return 1;
+//   return base * getPower(base, exponential - 1);
+// }
+
+// console.log(getPower(2, 4));
+
+// [1, 2, [3, 4]] => [1, 2, 3, 4]
+// array flattening
+
+function flatten(arr) {
+  let flattenedArray = [];
+
+  for (let i = 0; i < arr.length; i++) {
+    if (Array.isArray(arr[i])) {
+      flattenedArray = [...flattenedArray, ...flatten(arr[i])];
+      //   flattenedArray = flattenedArray.concat(flatten(arr[i]));
+    } else {
+      flattenedArray.push(arr[i]);
+    }
+  }
+
+  return flattenedArray;
+}
+
+let arr = [1, 2, 3, [4, 5, 6, [7, 8, 9], [], 10, null, "Hello"]];
+console.log(flatten(arr));
