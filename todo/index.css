@@ -1,0 +1,81 @@
+body {
+  background-color: chocolate;
+  color: white;
+}
+
+header {
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+}
+
+input {
+  border: none;
+  outline: none;
+}
+
+#new-input {
+  padding: 1rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  width: 250px;
+}
+
+.submit-btn {
+  padding: 1rem;
+  background-color: lightcoral;
+  border-radius: 5px;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+main {
+  max-width: 800px;
+  width: 100%;
+}
+
+.task-list {
+  margin: 10px;
+  text-align: center;
+}
+
+.task {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 20px;
+}
+
+.task .content .text {
+  padding: 1rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  width: 400px;
+}
+
+.task .actions {
+  margin-left: 5px;
+}
+
+.edit {
+  padding: 1rem;
+  background-color: green;
+  border-radius: 5px;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.delete {
+  padding: 1rem;
+  background-color: red;
+  border-radius: 5px;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
