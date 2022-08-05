@@ -1,0 +1,43 @@
+.accordian {
+  max-width: 800px;
+}
+
+.accordian .contentbox {
+  position: relative;
+  margin: 10px 20px;
+}
+
+.accordian .contentbox .label {
+  position: relative;
+  padding: 10px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+.accordian .contentbox .label::after {
+  content: "+";
+  position: absolute;
+  top: 18%;
+  right: 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.accordian .contentbox .content {
+  position: relative;
+  background-color: lightgrey;
+  height: 0;
+  overflow: hidden;
+}
+
+.accordian .contentbox.active .content {
+  height: auto;
+  padding: 10px;
+}
+
+.accordian .contentbox.active .label::after {
+  content: "-";
+  position: absolute;
+  top: 10%;
+}
