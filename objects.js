@@ -15,18 +15,18 @@
 // console.log(circle1.radius, circle1.draw(), circle1);
 
 // constructor method
-// function Circle(radius) {
-//   console.log("before setting values", this);
-//   let name = "vasanth";
-//   this.radius = radius;
-//   this.draw = function () {
-//     return "drawing circle";
-//   };
-//   return this;
-// }
+function Circle(radius) {
+  console.log("before setting values", this);
+  let name = "vasanth";
+  this.radius = radius;
+  this.draw = function () {
+    return "drawing circle";
+  };
+  //   return this;
+}
 
-// let circle = new Circle(1);
-// console.log(circle);
+let circle = new Circle(1);
+console.log(circle);
 
 // let circle1 = new Circle(120);
 // console.log(circle1, circle1.draw());
