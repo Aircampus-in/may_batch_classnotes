@@ -397,17 +397,99 @@
 // vasanth.setFullName = "Rajesh";
 // console.log(vasanth.fullName);
 
-Person();
-class Person1 {
-  constructor() {
-    console.log("person in class");
+// Person();
+// class Person1 {
+//   constructor() {
+//     console.log("person in class");
+//   }
+// }
+
+// new Person1();
+
+// function Person() {
+//   console.log("person in fn ");
+// }
+
+// function declarations are hoisted but classes are not hoisted
+
+// class -> it is a blue print
+// objects -> instance of class or real time entity
+
+// class Human {
+//   constructor(name, age, gender) {
+//     this.name = name;
+//     this.age = age;
+//     this.gender = gender;
+//   }
+
+//   eat() {
+//     console.log("eating ");
+//   }
+
+//   sleep() {
+//     console.log("sleeping");
+//   }
+
+//   think() {
+//     // console.log("thinking");
+//     return "thinking";
+//   }
+// }
+
+// let vasanth = new Human("vasanth", 10, "Male");
+// console.log(vasanth, vasanth.think());
+// let Rani = new Human("rani", 14, "Female");
+
+// class Car {
+//   constructor(model, color, brand, type) {
+//     this.model = model;
+//     this.color = color;
+//     this.brand = brand;
+//     this.type = type;
+//   }
+
+//   run() {
+//     console.log("running");
+//   }
+
+//   playSongs() {
+//     console.log("songs");
+//   }
+// }
+
+// let hondaCity = new Car("2022", "red", "honda", "sedan");
+// let rangeaRover = new Car("2022", "red yellow", "tata", "SUV");
+
+// inheritance
+class GrandParent {
+  house() {
+    console.log("house");
   }
 }
 
-new Person1();
-
-function Person() {
-  console.log("person in fn ");
+class Parent extends GrandParent {
+  car() {
+    console.log("maruti espresso");
+  }
 }
 
-// function declarations are hoisted but classes are not hoisted
+class Child extends Parent {
+  bike() {
+    console.log("yamaha");
+  }
+
+  // polymorphism -> method overriding
+  car() {
+    console.log("audi");
+  }
+}
+
+let vinayagam = new GrandParent();
+vinayagam.house();
+let vasanth = new Parent();
+let aadhitya = new Child();
+vasanth.car();
+aadhitya.car();
+// // aadhitya.bike();
+vasanth.house();
+aadhitya.house();
