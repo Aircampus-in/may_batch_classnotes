@@ -15,18 +15,18 @@
 // console.log(circle1.radius, circle1.draw(), circle1);
 
 // constructor method
-function Circle(radius) {
-  console.log("before setting values", this);
-  let name = "vasanth";
-  this.radius = radius;
-  this.draw = function () {
-    return "drawing circle";
-  };
-  //   return this;
-}
+// function Circle(radius) {
+//   console.log("before setting values", this);
+//   let name = "vasanth";
+//   this.radius = radius;
+//   this.draw = function () {
+//     return "drawing circle";
+//   };
+//   //   return this;
+// }
 
-let circle = new Circle(1);
-console.log(circle);
+// let circle = new Circle(1);
+// console.log(circle);
 
 // let circle1 = new Circle(120);
 // console.log(circle1, circle1.draw());
@@ -354,3 +354,46 @@ console.log(circle);
 // };
 
 // add();
+
+// object prototypes
+// let person = {
+//   name: "vasanth",
+//   age: 20,
+// };
+
+// let person2 = {
+//   name: "hema",
+// };
+
+// person2.__proto__ = person;
+
+// console.log(Object.getPrototypeOf(person2));
+// Object.hasOwn is same as Object.hasOwnProperty
+// console.log(Object.hasOwnProperty(person2, "age"));
+// console.log(Object.hasOwn(person2, "age"));
+
+let person = {
+  name: "vasanth",
+  age: 20,
+};
+
+// // Object.freeze(person);
+// person["name"] = "Prabhat";
+// person["age"] = 30;
+// console.log(person);
+
+// person["place"] = "chennai";
+// Object.defineProperty(person, "place", {
+//   value: "chennai",
+//   writable: false,
+// });
+
+// person.place = "haridwar";
+// console.log(person.place);
+
+// function add(n1, n2) {
+//   console.log(arguments[0], arguments[1]);
+//   return n1 + n2;
+// }
+
+// add(5, 2);

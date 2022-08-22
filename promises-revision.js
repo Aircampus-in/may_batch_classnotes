@@ -461,35 +461,97 @@
 // let rangeaRover = new Car("2022", "red yellow", "tata", "SUV");
 
 // inheritance
-class GrandParent {
-  house() {
-    console.log("house");
+// class GrandParent {
+//   house() {
+//     console.log("house");
+//   }
+// }
+
+// class Parent extends GrandParent {
+//   car() {
+//     console.log("maruti espresso");
+//   }
+// }
+
+// class Child extends Parent {
+//   bike() {
+//     console.log("yamaha");
+//   }
+
+//   // polymorphism -> method overriding
+//   car() {
+//     console.log("audi");
+//   }
+// }
+
+// let vinayagam = new GrandParent();
+// vinayagam.house();
+// let vasanth = new Parent();
+// let aadhitya = new Child();
+// vasanth.car();
+// aadhitya.car();
+// // // aadhitya.bike();
+// vasanth.house();
+// aadhitya.house();`
+
+// function Person(name) {
+//   this.name = name;
+//   this.getName = function () {
+//     return this.name;
+//   };
+
+//   this.num = 10;
+// }
+
+class Person {
+  constructor(name) {
+    this.name = name;
+  }
+
+  num = 10;
+
+  getName() {
+    return this.name;
   }
 }
 
-class Parent extends GrandParent {
-  car() {
-    console.log("maruti espresso");
+// let vasanth = new Person("vasanth");
+// let anish = new Person("anish");
+// console.log(vasanth.getName(), vasanth.num);
+
+// class Laptop {
+//   constructor(ram, rom, brand, size = 15.4) {
+//     this.ram = ram;
+//     this.rom = rom;
+//     this.brand = brand;
+//     this.size = size;
+//   }
+// }
+
+// let macbookAir = new Laptop("4gb", 128, "apple", 13.3);
+// let acer123 = new Laptop("4gb", 128, "acer");
+// let dell = new Laptop("4gb", 128, "dell");
+
+// console.log(macbookAir, acer123, dell);
+
+// prototypical inheritance
+// polyfill
+// method
+// fetch(), axios()
+// jquery -> react, angular
+// css advanced
+// call, bind, apply
+// currying
+// ()()()
+
+function getFact(num) {
+  if (num == 1) {
+    return 1;
   }
+
+  return num * getFact(num - 1);
 }
 
-class Child extends Parent {
-  bike() {
-    console.log("yamaha");
-  }
-
-  // polymorphism -> method overriding
-  car() {
-    console.log("audi");
-  }
-}
-
-let vinayagam = new GrandParent();
-vinayagam.house();
-let vasanth = new Parent();
-let aadhitya = new Child();
-vasanth.car();
-aadhitya.car();
-// // aadhitya.bike();
-vasanth.house();
-aadhitya.house();
+console.time();
+console.log(getFact(50000000000));
+console.timeEnd();

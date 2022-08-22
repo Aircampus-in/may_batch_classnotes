@@ -122,17 +122,120 @@
 // // username = "ajay";
 // // console.log(getCredentials());
 
-for (let i = 0; i < 5; i++) {
-  (function (j) {
+// for (let i = 0; i < 5; i++) {
+//   (function (j) {
+//     setTimeout(() => {
+//       console.log(j);
+//     }, 1000);
+//   })(i);
+// }
+
+// // console.log("i", i);
+
+// // memory leak -> heap memory filled out
+
+// let num = 10;
+// console.log(num);
+
+// function outer() {
+//   let a = 10;
+//   function inner() {
+//     console.log(a);
+//   }
+
+//   return inner;
+// }
+
+// let innerFn = outer();
+// innerFn();
+
+// function newgetCredentialA() {
+//   let newusernameA = "vasanth";
+//   let count = 1;
+//   let newpasswordA = "1234";
+//   if (count % 3 === 0) {
+//     count = count + 1;
+//     return {
+//       newusernameA: newusernameA,
+//       newpasswordA: newpasswordA,
+//     };
+//   }
+//   count = count + 1;
+// }
+// console.log(newgetCredentialA());
+
+// console.log(newgetCredentialA());
+// console.log(newgetCredentialA());
+// console.log(newgetCredentialA());
+// console.log(newgetCredentialA());
+// console.log(newgetCredentialA());
+// console.log(newgetCredentialA());
+// console.log(newgetCredentialA());
+// console.log(newgetCredentialA());
+// console.log(newgetCredentialA());
+// console.log(newgetCredentialA());
+// console.log(newgetCredentialA());
+
+// let array = [1, 2, 3, 4];
+
+// Array.prototype.vasanthMap = function (callbackFn) {
+//   var arr = [];
+//   console.log(this);
+//   for (let i = 0; i < this.length; i++) {
+//     arr.push(callbackFn(this[i]));
+//   }
+
+//   return arr;
+// };
+
+// // let nums = array.map((num) => num * 2);
+// let nums2 = array.vasanthMap((num) => num * 2);
+// console.log(nums2);
+
+// function orderFood() {
+//   console.log("ordering food");
+// }
+
+// function prepareFood(eatingFn) {
+//   setTimeout(() => {
+//     console.log("preparing food");
+//     let food = "butter";
+//     eatingFn(food);
+//   }, 2000);
+// }
+
+// function eating(food) {
+//   console.log("start eating", food);
+// }
+
+// function hotelScenario() {
+//   console.log("entering into hotel");
+//   orderFood();
+//   prepareFood(eating);
+// eatingFood()
+// }
+
+// hotelScenario();
+
+function getAge() {
+  return new Promise((res, rej) => {
     setTimeout(() => {
-      console.log(j);
-    }, 1000);
-  })(i);
+      res("vasanth is a good boy");
+    }, 3000);
+  });
 }
 
-// console.log("i", i);
+async function name() {
+  let age = await getAge();
+  console.log(age);
+}
 
-// memory leak -> heap memory filled out
+name();
 
-let num = 10;
-console.log(num);
+function Person() {
+  this.name = "vasanth";
+}
+
+class Person {
+  name = "vasanth";
+}
