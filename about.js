@@ -206,3 +206,14 @@
 // }, 10);
 
 // console.log(reducedNum);
+
+function storeData() {
+  let input = document.getElementById("name");
+  localStorage.setItem("name", input.value);
+  console.log("storing the name", input.value);
+}
+
+let input = document.getElementById("name");
+console.log("getting data from local storage");
+// debugger;
+// input.value = localStorage.getItem("name");
